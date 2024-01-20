@@ -864,27 +864,102 @@ function decript($string)
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	html {
+		background-color: #333;
+
+		color: aliceblue;
+	}
+
+	.ct {
+		align-items: center;
+		text-align: center;
+		width: 76%;
+		margin-left: 12%;
+		background-color: #666;
+	}
+
+	footer {
+		text-align: center;
+		bottom: 10px;
+		margin-top: 10px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+	h1 {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	textarea {
+		width: 80%;
+		background-color: #333;
+		resize: none;
+		margin-bottom: 10px;
+		color: aliceblue;
+		border-radius: 5px;
+		padding: 5px;
+	}
+
+	button {
+		border-radius: 5px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		width: 76%;
+		background-color: #333;
+		resize: none;
+		margin-bottom: 30px;
+		padding: 2%;
+		color: aliceblue;
+		font-size: 100%;
+	}
+
+	span {
+		color: yellow;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 30px;
+		display: none;
+	}
+</style>
 
 <body>
-	<?php
-	//echo encript('Eduardo');
-	echo '<br>';
-	//echo decript('a14590a969b495742f4cb7950dd2136f5245d174ef8a930e469abea59338f2fa95Ec1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739d4f1e9dcc09138852270ff5031f3ed5d842a04fc543b9cc13b779e704104bb07697u3990394328467bc1635be63bb72eb59eee36cf06a5db0b8a618c6c91c4103e7302ab805a1bf75316026c534b4928af60eec8b328b4c86d79be4301c83e595b9bf4697rc1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739dc1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739oa14590a969b495742f4cb7950dd2136f5245d174ef8a930e469abea59338f2fa95');
-
-	//echo bin2hex(random_bytes(33));
-	echo '<br>';
-	echo '<br>';
-
-
-	?>
+	<div class="ct">
+		<h1>Text Kryptus</h1> 
+		<textarea name="" id="t" cols="30" rows="10" placeholder="Paste your code here..."></textarea>
+		<br>
+		<button id="b">Start</button>
+		<button id="d">Decript</button>
+	</div>
 </body>
-
 <script>
+ 
+var texto = document.getElementById('t');
+var criptografar = document.getElementById('b');
+var decriptografar = document.getElementById('d');
 
-	//console.log(encript('Eduardo'));
-	console.log(decript('a14590a969b495742f4cb7950dd2136f5245d174ef8a930e469abea59338f2fa95E3990394328467bc1635be63bb72eb59eee36cf06a5db0b8a618c6c91c4103e7302d0eb49ea919667725bd1b2e92335db3da8559eb0a89e7d9f1e4c728915254f05369ua14590a969b495742f4cb7950dd2136f5245d174ef8a930e469abea59338f2fa95ac1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739rc1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739d0eb49ea919667725bd1b2e92335db3da8559eb0a89e7d9f1e4c728915254f05369o3990394328467bc1635be63bb72eb59eee36cf06a5db0b8a618c6c91c4103e7302'));
 
-	function encript(string) {
+criptografar.addEventListener('click',()=>{
+	var ttt = encript(texto.value);
+    texto.value = ttt; 
+	console.log(ttt);
+});
+
+
+decriptografar.addEventListener('click',()=>{
+	var ttt = decript(texto.value);
+    texto.value = ttt; 
+	console.log(ttt);
+});
+
+ 
+ 
+ function encript(string) {
 
 		var arr = [];
 
@@ -956,6 +1031,42 @@ function decript($string)
 		}
 		return string;
 	}
+</script>
+<footer>
+	Created by BresoDEV
+</footer>
+
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<?php
+	//echo encript('Eduardo');
+	echo '<br>';
+	//echo decript('a14590a969b495742f4cb7950dd2136f5245d174ef8a930e469abea59338f2fa95Ec1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739d4f1e9dcc09138852270ff5031f3ed5d842a04fc543b9cc13b779e704104bb07697u3990394328467bc1635be63bb72eb59eee36cf06a5db0b8a618c6c91c4103e7302ab805a1bf75316026c534b4928af60eec8b328b4c86d79be4301c83e595b9bf4697rc1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739dc1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739oa14590a969b495742f4cb7950dd2136f5245d174ef8a930e469abea59338f2fa95');
+
+	//echo bin2hex(random_bytes(33));
+	echo '<br>';
+	echo '<br>';
+
+
+	?>
+</body>
+
+<script>
+
+	//console.log(encript('Eduardo'));
+	console.log(decript('a14590a969b495742f4cb7950dd2136f5245d174ef8a930e469abea59338f2fa95E3990394328467bc1635be63bb72eb59eee36cf06a5db0b8a618c6c91c4103e7302d0eb49ea919667725bd1b2e92335db3da8559eb0a89e7d9f1e4c728915254f05369ua14590a969b495742f4cb7950dd2136f5245d174ef8a930e469abea59338f2fa95ac1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739rc1f90aea9fe14ab277c1e0694c1fe4b22fce029c9101453c5c64abc79b6eece739d0eb49ea919667725bd1b2e92335db3da8559eb0a89e7d9f1e4c728915254f05369o3990394328467bc1635be63bb72eb59eee36cf06a5db0b8a618c6c91c4103e7302'));
+
+	
 </script>
 
 </html>
